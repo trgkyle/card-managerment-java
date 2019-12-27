@@ -88,6 +88,9 @@ public class Customer {
             System.out.println("Mat khau xac thuc khong khop");
         }
     }
+    public void historyActivity() throws SQLException {
+        this.account.getLogActiviry();
+    }
     public static void main(){
         System.out.println("Hello main customer");
     }

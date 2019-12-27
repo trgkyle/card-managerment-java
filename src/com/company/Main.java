@@ -14,13 +14,14 @@ public class Main {
             System.out.println("1. Thong tin Tai khoan");
             System.out.println("2. Tra cuu so du Tai khoan");
             System.out.println("3. Chuyen tien");
-            System.out.println("4. Tao tai khoan Khach Hang");
-            System.out.println("5. Hien thi danh sach tat ca thong tin tai khoan Khach Hang");
-            System.out.println("6. Reset mat khau khach hang");
-            System.out.println("7. Xoa tai khoan Khach Hang");
-            System.out.println("8. Chinh sua thong tin ca nhan");
-            System.out.println("9. Doi mat khau");
-            System.out.println("10. Dang Xuat");
+            System.out.println("4. Lich su chuyen tien");
+            System.out.println("5. Tao tai khoan Khach Hang");
+            System.out.println("6. Hien thi danh sach tat ca thong tin tai khoan Khach Hang");
+            System.out.println("7. Reset mat khau khach hang");
+            System.out.println("8. Xoa tai khoan Khach Hang");
+            System.out.println("9. Chinh sua thong tin ca nhan");
+            System.out.println("10. Doi mat khau");
+            System.out.println("11. Dang Xuat");
             System.out.println("=================================================================================");
             caseInput = sc.nextInt();
             switch (caseInput){
@@ -34,27 +35,31 @@ public class Main {
                     admin.tranferMoney();
                     break;
                 case 4:
-                    admin.createCustomerAccount();
+                    admin.historyActivity();
                     break;
                 case 5:
-                    admin.showAllCustomer();
+                    admin.createCustomerAccount();
                     break;
                 case 6:
-                    admin.adminResetPassword();
+                    admin.showAllCustomer();
                     break;
                 case 7:
-                    admin.deteleCustomerAccount();
+                    admin.adminResetPassword();
                     break;
                 case 8:
-                    admin.editInfo();
+                    admin.deteleCustomerAccount();
                     break;
                 case 9:
-                    admin.changePassword();
+                    admin.editInfo();
                     break;
                 case 10:
+                    admin.changePassword();
+                    break;
+                case 11:
                     admin.logoutAccount();
                     return;
                 default:
+                    System.out.println("Khong hop le");
                     break;
 
             }
@@ -92,7 +97,7 @@ public class Main {
                     customer.tranferMoney();
                     break;
                 case 5:
-                    // lich su giao dich
+                    customer.historyActivity();
                     break;
                 case 6:
                     customer.editInfo();
@@ -107,6 +112,7 @@ public class Main {
                     customer.logoutAccount();
                     return;
                 default:
+                    System.out.println("Khong hop le");
                     break;
 
             }

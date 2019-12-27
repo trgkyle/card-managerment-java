@@ -311,5 +311,20 @@ public class Account {
             return false;
         }
     }
-
+    public void getLogActiviry() throws SQLException{
+        try{
+            String query = "select * from mana_accout WHERE username='"+this.username+"' && password='"+this.password+"'";
+            ResultSet rs = this.statement.executeQuery(query);
+            if(rs.next()){
+                System.out.println("Lich su giao dich : \n");
+                System.out.println(rs.getString(11));
+            }
+            else{
+                System.out.println("Khong tim thay du lieu");
+            }
+        }
+        catch(SQLException e){
+            System.out.println("Khong tim thay du lieu");
+        }
+    }
 }
