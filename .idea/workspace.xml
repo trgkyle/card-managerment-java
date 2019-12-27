@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d49f20e1-0018-4c91-b27f-108d391f0d80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Account.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/ConnectionSQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/ConnectionSQL.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Customer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ConnectionSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ConnectionSQL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
@@ -18,6 +17,20 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -125,7 +138,7 @@
       <workItem from="1576687112347" duration="644000" />
       <workItem from="1577158311910" duration="5292000" />
       <workItem from="1577324466815" duration="8163000" />
-      <workItem from="1577412666906" duration="3438000" />
+      <workItem from="1577412666906" duration="7006000" />
     </task>
     <servers />
   </component>

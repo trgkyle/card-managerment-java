@@ -11,7 +11,7 @@ public class Admin {
         Scanner sc = new Scanner(System.in);
         String username,password;
         do {
-            System.out.println("==================Dang Nhap=====================");
+            System.out.println("==================ADMIN LOGIN=====================");
             System.out.print("User name : ");
             username = sc.nextLine();
             System.out.print("Password : ");
@@ -21,6 +21,9 @@ public class Admin {
                 System.out.println("Error Alert: Sai Tai khoan hoac mat khau");
                 System.out.println();
             }
+            else if(!this.account.isAdmin()){
+                System.out.println("Tai khoan khong co quyen truy cap");
+            }
             else{
                 this.username = username;
                 this.password = password;
@@ -28,7 +31,19 @@ public class Admin {
         }
         while(!this.account.statusLogin && !this.account.isAdmin());
     }
-    public void createCustomerAccount(){
+    public void createCustomerAccount() throws SQLException {
+        Scanner sc = new Scanner(System.in);
+        String username;
+        String password;
+        System.out.print("Tai khoan : ");
+        username = sc.nextLine();
+        System.out.print("Mat khau : ");
+        password = sc.nextLine();
+        if(this.account.signUp(username,password)){
+            System.out.println("Tao tai khoan thanh cong");
+        }
+        else
+            System.out.println("Co loi tao tai khoan");
 
     }
     public void showAllCustomer(){
@@ -37,11 +52,8 @@ public class Admin {
     public void deteleCustomerAccount(){
 
     }
-    public void loginAccount(String username,String password) throws SQLException {
-        System.out.println(this.account.login(username,password));
-    }
     public void logoutAccount(){
-
+        System.out.println(this.account.logout());
     }
     public static void main(){
         System.out.println("Hello main Admin");
