@@ -27,6 +27,7 @@ public class Main {
                     break;
                 case 2:
                     admin.getReMainerThisAccount();
+                    break;
                 case 3:
                     admin.createCustomerAccount();
                     break;
@@ -43,6 +44,7 @@ public class Main {
                     //doi mat khau admin
                     break;
                 case 8:
+                    admin.logoutAccount();
                     return;
                 default:
                     break;
@@ -81,8 +83,10 @@ public class Main {
                     customer.tranferMoney();
                     break;
                 case 5:
+                    // lich su giao dich
                     break;
                 case 6:
+                    // doi mat khau
                     break;
                 case 7:
                     customer.deteleAccount();

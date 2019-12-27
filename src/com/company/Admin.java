@@ -49,10 +49,17 @@ public class Admin {
     public void showAllCustomer() throws SQLException {
         this.account.showAllCustomer();
     }
-    public void deteleCustomerAccount(){
+    public void deteleCustomerAccount() throws SQLException {
+        Scanner sc = new Scanner(System.in);
         String username;
-
-
+        String username2;
+        do{
+            System.out.println("Nhap ten tai khoan : ");
+            username = sc.nextLine();
+            System.out.println("Xac nhan lai ten tai khoan : ");
+            username2 = sc.nextLine();
+        }while(username != username2);
+        this.account.deteleCustomerAccount(username);
     }
     public void showInfoAccount(){
         this.account.showInfoThisAccount();

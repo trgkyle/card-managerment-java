@@ -4,8 +4,6 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Customer {
-    public String username;
-    private Account account = new Account();
     Customer() throws SQLException {
         Scanner sc = new Scanner(System.in);
         String username,password;
@@ -29,6 +27,8 @@ public class Customer {
         }
         while(!this.account.statusLogin || this.account.isAdmin());
     }
+    public String username;
+    private Account account = new Account();
     public void deteleAccount() throws SQLException {
         account.deteleThisAccount();
     }
