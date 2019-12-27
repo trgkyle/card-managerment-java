@@ -54,11 +54,11 @@ public class Admin {
         String username;
         String username2;
         do{
-            System.out.println("Nhap ten tai khoan : ");
+            System.out.print("Nhap ten tai khoan : ");
             username = sc.nextLine();
-            System.out.println("Xac nhan lai ten tai khoan : ");
+            System.out.print("Xac nhan lai ten tai khoan : ");
             username2 = sc.nextLine();
-        }while(username != username2);
+        }while(!username.equals(username2));
         this.account.deteleCustomerAccount(username);
     }
     public void showInfoAccount(){
@@ -77,6 +77,57 @@ public class Admin {
         amount = sc.nextInt();
         if(!this.account.transferMoney(userTo,amount)){
             System.out.println("Chuyen tien that bai");
+        }
+    }
+    public void editInfo() throws SQLException {
+        Scanner sc = new Scanner(System.in);
+        String firstName;
+        String lastName;
+        int age;
+        String phone;
+        System.out.print("Ten : ");
+        firstName = sc.nextLine();
+        System.out.print("Ho : ");
+        lastName = sc.nextLine();
+        System.out.print("Tuoi : ");
+        age = sc.nextInt();
+        sc.nextLine();
+        System.out.print("So dien thoai : ");
+        phone = sc.nextLine();
+        this.account.editInfoThisAccount(firstName,lastName,age,phone);
+    }
+    public void changePassword() throws SQLException {
+        Scanner sc = new Scanner(System.in);
+        String oldPassword;
+        String password;
+        String password2;
+        System.out.print("Nhap mat khau cu : ");
+        oldPassword = sc.nextLine();
+        System.out.print("Nhap mat khau moi : ");
+        password = sc.nextLine();
+        System.out.print("Xac nhan mat khau moi : ");
+        password2 = sc.nextLine();
+        if (password.equals(password2)) {
+            this.account.changePasswordThisAccount(oldPassword,password);
+        } else{
+            System.out.println("Mat khau xac thuc khong khop");
+        }
+    }
+    public void adminResetPassword() throws SQLException {
+        Scanner sc = new Scanner(System.in);
+        String userName;
+        String password;
+        String password2;
+        System.out.print("Nhap tai khoan : ");
+        userName = sc.nextLine();
+        System.out.print("Nhap mat khau moi : ");
+        password = sc.nextLine();
+        System.out.print("Xac nhan mat khau moi : ");
+        password2 = sc.nextLine();
+        if (password.equals(password2)) {
+            this.account.adminResetPassword(userName,password);
+        } else{
+            System.out.println("Mat khau xac thuc khong khop");
         }
     }
     public static void main(){

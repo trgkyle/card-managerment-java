@@ -18,8 +18,9 @@ public class Main {
             System.out.println("5. Hien thi danh sach tat ca thong tin tai khoan Khach Hang");
             System.out.println("6. Reset mat khau khach hang");
             System.out.println("7. Xoa tai khoan Khach Hang");
-            System.out.println("8. Doi mat khau");
-            System.out.println("9. Dang Xuat");
+            System.out.println("8. Chinh sua thong tin ca nhan");
+            System.out.println("9. Doi mat khau");
+            System.out.println("10. Dang Xuat");
             System.out.println("=================================================================================");
             caseInput = sc.nextInt();
             switch (caseInput){
@@ -39,15 +40,18 @@ public class Main {
                     admin.showAllCustomer();
                     break;
                 case 6:
-                    //reset mat khau khach hang
+                    admin.adminResetPassword();
                     break;
                 case 7:
                     admin.deteleCustomerAccount();
                     break;
                 case 8:
-                    //doi mat khau admin
+                    admin.editInfo();
                     break;
                 case 9:
+                    admin.changePassword();
+                    break;
+                case 10:
                     admin.logoutAccount();
                     return;
                 default:
@@ -94,7 +98,7 @@ public class Main {
                     customer.editInfo();
                     break;
                 case 7:
-                    // doi mat khau
+                    customer.changePassword();
                     break;
                 case 8:
                     customer.deteleAccount();

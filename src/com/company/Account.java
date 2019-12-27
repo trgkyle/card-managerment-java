@@ -183,9 +183,14 @@ public class Account {
     public void deteleCustomerAccount(String username)throws SQLException{
         if(this.isAdmin && this.statusLogin){
             if(this.checkExistAccount(username)){
-                String query = "DELETE FROM mana_accout WHERE username='"+username+"'";
-                int rs = this.statement.executeUpdate(query);
-                System.out.println("Xoa thanh cong tai khoan : "+ username);
+                if(username.equals(this.username)){
+                    System.out.println("Khong duoc xoa chinh tai khoan nay");
+                }
+                else{
+                    String query = "DELETE FROM mana_accout WHERE username='"+username+"'";
+                    int rs = this.statement.executeUpdate(query);
+                    System.out.println("Xoa thanh cong tai khoan : "+ username);
+                }
             }
             else{
                 System.out.println("Tai khoan khong ton tai. Khong the xoa");
@@ -253,4 +258,58 @@ public class Account {
             return false;
         }
     }
+    private boolean changePassWord(String username,String password) throws SQLException {
+        if(this.checkExistAccount(username)){
+            try {
+                String query = "update `mana_accout` set `password`= '" + password + "' where username = '"+ username + "'";
+                int rs = this.statement.executeUpdate(query);
+                System.out.println("Doi mat khau thanh cong");
+                return true;
+            }catch (SQLException e){
+                System.out.println("Doi mat khau that bai");
+                return false;
+            }
+        }
+        else{
+            System.out.println("Tai khoan khong ton tai");
+            return false;
+        }
+    }
+    public boolean changePasswordThisAccount(String oldPassword, String password) throws SQLException{
+        if(this.statusLogin){
+            if(oldPassword.equals(this.password)){
+                if(this.changePassWord(this.username,password)){
+                    this.password = password;
+                    return true;
+                }
+                else{
+                    // doi mat khau khong thanh cong
+                    return false;
+                }
+            }else{
+                System.out.println("Mat khau cu khong chinh xac");
+                return false;
+            }
+        }
+        else{
+            System.out.println("Khong the thuc hien tac vu nay");
+            return true;
+        }
+
+    }
+    public boolean adminResetPassword(String username,String password) throws SQLException {
+        if(this.statusLogin && this.isAdmin){
+            if(this.changePassWord(username, password)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            System.out.println("Ban khong co quyen thuc hien tac vu nay ");
+            return false;
+        }
+    }
+
 }

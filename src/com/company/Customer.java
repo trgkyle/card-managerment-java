@@ -50,14 +50,14 @@ public class Customer {
         String lastName;
         int age;
         String phone;
-        System.out.println("Ten : ");
+        System.out.print("Ten : ");
         firstName = sc.nextLine();
-        System.out.println("Ho : ");
+        System.out.print("Ho : ");
         lastName = sc.nextLine();
-        System.out.println("Tuoi : ");
+        System.out.print("Tuoi : ");
         age = sc.nextInt();
         sc.nextLine();
-        System.out.println("So dien thoai : ");
+        System.out.print("So dien thoai : ");
         phone = sc.nextLine();
         this.account.editInfoThisAccount(firstName,lastName,age,phone);
     }
@@ -70,6 +70,23 @@ public class Customer {
     }
     public void showInfoAccount(){
         this.account.showInfoThisAccount();
+    }
+    public void changePassword() throws SQLException {
+        Scanner sc = new Scanner(System.in);
+        String oldPassword;
+        String password;
+        String password2;
+        System.out.print("Nhap mat khau cu : ");
+        oldPassword = sc.nextLine();
+        System.out.print("Nhap mat khau moi : ");
+        password = sc.nextLine();
+        System.out.print("Xac nhan mat khau moi : ");
+        password2 = sc.nextLine();
+        if (password.equals(password2)) {
+            this.account.changePasswordThisAccount(oldPassword,password);
+        } else{
+            System.out.println("Mat khau xac thuc khong khop");
+        }
     }
     public static void main(){
         System.out.println("Hello main customer");
