@@ -11,8 +11,44 @@ public class Account {
 
     public boolean statusLogin = false;
     private boolean isAdmin = false;
-
-    public boolean checkExistAccount(String user) throws SQLException {
+    private boolean transferMoneyAction(String from,String to,int amount) throws SQLException {
+        try{
+            String fromQuery = "update `mana_accout` set `wallet`= '" + (this.getRemainer(from) - amount) + "' where username='" + from +"' ";
+            int fromRS = this.statement.executeUpdate(fromQuery);
+        }catch (SQLException e){
+            System.out.println("Loi tru tien");
+            return false;
+        }
+        try{
+            String toQuery = "update `mana_accout` set `wallet`= '" + (this.getRemainer(to) + amount) + "' where username='" + to +"' ";
+            int toRS = this.statement.executeUpdate(toQuery);
+        }catch(SQLException e){
+            System.out.println("Loi cong tien");
+            return false;
+        }
+        return true;
+    }
+    private boolean validMoneyTransfer(String from,int moneyTransfer) throws SQLException{
+        if(this.checkExistAccount(from)){
+            String fromQuery = "select * from mana_accout WHERE username='"+from+"'";
+            ResultSet fromRS = this.statement.executeQuery(fromQuery);
+            if(fromRS.next()){
+                int fromRemainer = fromRS.getInt(9);
+                if(fromRemainer >= moneyTransfer)
+                    return true;
+                return false;
+            }
+            else{
+                System.out.println("Co loi !. khong tim thay tai khoan chuyen tien");
+                return false;
+            }
+        }
+        else{
+            System.out.println("Co loi !. khong tim thay tai khoan chuyen tien");
+            return false;
+        }
+    }
+    private boolean checkExistAccount(String user) throws SQLException {
         String query = "select * from mana_accout WHERE username='"+user+"'";
         ResultSet rs = this.statement.executeQuery(query);
         if(rs.next()){
@@ -157,5 +193,45 @@ public class Account {
             System.out.println("Ban khong co quyen xoa tai khoan");
         }
     }
-
+    private int getRemainer(String username) throws SQLException {
+        if(this.checkExistAccount(username)){
+            String query = "select * from mana_accout WHERE username='"+username+"'";
+            ResultSet rs = this.statement.executeQuery(query);
+            return rs.getInt(9);
+        }
+        else
+        {
+            System.out.println("Loi khong tim thay tai khoan");
+            return -1;
+        }
+    }
+    public void getRemainerThisAccount() throws SQLException {
+        System.out.println();
+        System.out.println("So du Tai khoan hien co :"+ this.rs.getInt(9));
+        System.out.println();
+    }
+    public boolean transferMoney(String username,int amount) throws SQLException {
+        if(this.statusLogin){
+            if(this.checkExistAccount(username)){
+                if(this.validMoneyTransfer(this.username,amount)){
+                    if(this.transferMoneyAction(this.username,username,amount)){
+                        return true;
+                    }
+                    return false;
+                }
+                else{
+                    System.out.println("Tai khoan cua ban khong du so du");
+                    return false;
+                }
+            }
+            else{
+                System.out.println("Tai khoan nhan tien khong ton tai");
+                return false;
+            }
+        }
+        else{
+            System.out.println("Ban phai dang nhap de chuyen tien");
+            return false;
+        }
+    }
 }

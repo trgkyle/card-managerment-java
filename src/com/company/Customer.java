@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Customer {
+    public String username;
     private Account account = new Account();
     Customer() throws SQLException {
         Scanner sc = new Scanner(System.in);
@@ -17,31 +18,43 @@ public class Customer {
             System.out.println("================================================");
             if(!this.account.login(username, password)){
                 System.out.println("Error Alert: Sai Tai khoan hoac mat khau");
-                System.out.println();
             }
             else if(this.account.isAdmin()){
-                System.out.println("Admin khong the truy cap duoi dang User");
+                System.out.println("Error Alert: Admin khong the truy cap duoi dang User");
                 this.account.logout();
             }
+            else{
+                this.username = username;
+            }
         }
-        while(!this.account.statusLogin && this.account.isAdmin());
+        while(!this.account.statusLogin || this.account.isAdmin());
     }
-    public void deteleAccount(){
+    public void deteleAccount() throws SQLException {
+        account.deteleThisAccount();
     }
-    public void tranferMoney(){
-
+    public void tranferMoney() throws SQLException {
+        Scanner sc = new Scanner(System.in);
+        String userTo;
+        int amount;
+        System.out.println("Nhap ten tai khoan muon chuyen tien :");
+        userTo = sc.nextLine();
+        System.out.println("Nhap so tien muon chuyen");
+        amount = sc.nextInt();
+        if(!this.account.transferMoney(userTo,amount)){
+            System.out.println("Chuyen tien that bai");
+        }
     }
     public void editInfo(){
 
     }
-    public void getRemainder(){
-
+    public void getRemainderThisAccount() throws SQLException {
+        this.account.getRemainerThisAccount();
     }
     public void logoutAccount(){
         System.out.println("Dang xuat");
         this.account.logout();
     }
-    public void showInfo(){
+    public void showInfoAccount(){
         this.account.showInfoThisAccount();
     }
     public static void main(){

@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 public class Admin {
     private Account account = new Account();
-    private String username;
-    private String password;
+    public String username;
     Admin() throws SQLException {
         Scanner sc = new Scanner(System.in);
         String username,password;
@@ -26,10 +25,12 @@ public class Admin {
             }
             else{
                 this.username = username;
-                this.password = password;
             }
         }
-        while(!this.account.statusLogin && !this.account.isAdmin());
+        while(!this.account.statusLogin || !this.account.isAdmin());
+    }
+    public void getReMainerThisAccount() throws SQLException {
+        this.account.getRemainerThisAccount();
     }
     public void createCustomerAccount() throws SQLException {
         Scanner sc = new Scanner(System.in);
