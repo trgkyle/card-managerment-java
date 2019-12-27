@@ -6,11 +6,9 @@ import java.sql.*;
 public class ConnectionSQL {
     private Statement statement;
     public boolean statusConnect;
-
     public Statement getStatement() {
         return statement;
     }
-
     ConnectionSQL(){
         try{
             Class.forName("com.mysql.jdbc.Driver");

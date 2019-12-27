@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) throws SQLException {
         Admin admin = new Admin();
-        admin.createCustomerAccount();
+        admin.showAllCustomer();
 	    //Customer customer = new Customer();
     }
 }

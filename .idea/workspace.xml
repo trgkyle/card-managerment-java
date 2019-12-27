@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ConnectionSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ConnectionSQL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
@@ -138,7 +139,7 @@
       <workItem from="1576687112347" duration="644000" />
       <workItem from="1577158311910" duration="5292000" />
       <workItem from="1577324466815" duration="8163000" />
-      <workItem from="1577412666906" duration="7006000" />
+      <workItem from="1577412666906" duration="8980000" />
     </task>
     <servers />
   </component>

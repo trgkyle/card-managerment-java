@@ -44,16 +44,20 @@ public class Admin {
         }
         else
             System.out.println("Co loi tao tai khoan");
-
     }
-    public void showAllCustomer(){
-
+    public void showAllCustomer() throws SQLException {
+        this.account.showAllCustomer();
     }
     public void deteleCustomerAccount(){
+        String username;
+
 
     }
+    public void showInfoAccount(){
+        this.account.showInfoThisAccount();
+    }
     public void logoutAccount(){
-        System.out.println(this.account.logout());
+        this.account.logout();
     }
     public static void main(){
         System.out.println("Hello main Admin");

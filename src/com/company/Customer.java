@@ -28,7 +28,6 @@ public class Customer {
     }
     public void deteleAccount(){
     }
-
     public void tranferMoney(){
 
     }
@@ -43,7 +42,7 @@ public class Customer {
         this.account.logout();
     }
     public void showInfo(){
-
+        this.account.showInfoThisAccount();
     }
     public static void main(){
         System.out.println("Hello main customer");
