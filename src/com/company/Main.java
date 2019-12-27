@@ -61,7 +61,6 @@ public class Main {
                 default:
                     System.out.println("Khong hop le");
                     break;
-
             }
         }while(true);
     }
@@ -136,6 +135,9 @@ public class Main {
                 case 2:
                     main.customerVoid();
                     break;
+                default:
+                    return;
+
             }
         }while(true);
 
