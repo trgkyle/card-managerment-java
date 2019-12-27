@@ -67,6 +67,18 @@ public class Admin {
     public void logoutAccount(){
         this.account.logout();
     }
+    public void tranferMoney() throws SQLException {
+        Scanner sc = new Scanner(System.in);
+        String userTo;
+        int amount;
+        System.out.println("Nhap ten tai khoan muon chuyen tien :");
+        userTo = sc.nextLine();
+        System.out.println("Nhap so tien muon chuyen");
+        amount = sc.nextInt();
+        if(!this.account.transferMoney(userTo,amount)){
+            System.out.println("Chuyen tien that bai");
+        }
+    }
     public static void main(){
         System.out.println("Hello main Admin");
     }

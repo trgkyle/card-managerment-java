@@ -4,10 +4,9 @@
     <list default="true" id="d49f20e1-0018-4c91-b27f-108d391f0d80" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Customer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -141,6 +140,7 @@
       <workItem from="1577427643119" duration="1695000" />
       <workItem from="1577429459316" duration="1786000" />
       <workItem from="1577431274255" duration="1765000" />
+      <workItem from="1577433110742" duration="1692000" />
     </task>
     <servers />
   </component>

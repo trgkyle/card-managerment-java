@@ -13,12 +13,13 @@ public class Main {
             System.out.println("Hi. "+admin.username +" !");
             System.out.println("1. Thong tin Tai khoan");
             System.out.println("2. Tra cuu so du Tai khoan");
-            System.out.println("3. Tao tai khoan Khach Hang");
-            System.out.println("4. Hien thi danh sach tat ca thong tin tai khoan Khach Hang");
-            System.out.println("5. Reset mat khau khach hang");
-            System.out.println("6. Xoa tai khoan Khach Hang");
-            System.out.println("7. Doi mat khau");
-            System.out.println("8. Dang Xuat");
+            System.out.println("3. Chuyen tien");
+            System.out.println("4. Tao tai khoan Khach Hang");
+            System.out.println("5. Hien thi danh sach tat ca thong tin tai khoan Khach Hang");
+            System.out.println("6. Reset mat khau khach hang");
+            System.out.println("7. Xoa tai khoan Khach Hang");
+            System.out.println("8. Doi mat khau");
+            System.out.println("9. Dang Xuat");
             System.out.println("=================================================================================");
             caseInput = sc.nextInt();
             switch (caseInput){
@@ -29,21 +30,24 @@ public class Main {
                     admin.getReMainerThisAccount();
                     break;
                 case 3:
-                    admin.createCustomerAccount();
+                    admin.tranferMoney();
                     break;
                 case 4:
-                    admin.showAllCustomer();
+                    admin.createCustomerAccount();
                     break;
                 case 5:
-                    //reset mat khau khach hang
+                    admin.showAllCustomer();
                     break;
                 case 6:
-                    admin.deteleCustomerAccount();
+                    //reset mat khau khach hang
                     break;
                 case 7:
-                    //doi mat khau admin
+                    admin.deteleCustomerAccount();
                     break;
                 case 8:
+                    //doi mat khau admin
+                    break;
+                case 9:
                     admin.logoutAccount();
                     return;
                 default:

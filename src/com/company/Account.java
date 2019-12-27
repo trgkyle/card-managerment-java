@@ -13,20 +13,22 @@ public class Account {
     private boolean isAdmin = false;
     private boolean transferMoneyAction(String from,String to,int amount) throws SQLException {
         try{
-            String fromQuery = "update `mana_accout` set `wallet`= '" + (this.getRemainer(from) - amount) + "' where username='" + from +"' ";
+            int remainer = this.getRemainer(from) - amount;
+            String fromQuery = "update `mana_accout` set `wallet`= '" + remainer + "' where username='" + from +"' ";
             int fromRS = this.statement.executeUpdate(fromQuery);
         }catch (SQLException e){
+            System.out.println(e);
             System.out.println("Loi tru tien");
             return false;
         }
         try{
             String toQuery = "update `mana_accout` set `wallet`= '" + (this.getRemainer(to) + amount) + "' where username='" + to +"' ";
             int toRS = this.statement.executeUpdate(toQuery);
+            return true;
         }catch(SQLException e){
             System.out.println("Loi cong tien");
             return false;
         }
-        return true;
     }
     private boolean validMoneyTransfer(String from,int moneyTransfer) throws SQLException{
         if(this.checkExistAccount(from)){
@@ -197,7 +199,12 @@ public class Account {
         if(this.checkExistAccount(username)){
             String query = "select * from mana_accout WHERE username='"+username+"'";
             ResultSet rs = this.statement.executeQuery(query);
-            return rs.getInt(9);
+            if(rs.next())
+                return rs.getInt(9);
+            else{
+                System.out.println("Kiem tra so du tai, khoan khong ton tai");
+                return -1;
+            }
         }
         else
         {
@@ -207,7 +214,7 @@ public class Account {
     }
     public void getRemainerThisAccount() throws SQLException {
         System.out.println();
-        System.out.println("So du Tai khoan hien co :"+ this.rs.getInt(9));
+        System.out.println("So du Tai khoan hien co :"+ this.getRemainer(this.username));
         System.out.println();
     }
     public boolean transferMoney(String username,int amount) throws SQLException {
@@ -215,6 +222,7 @@ public class Account {
             if(this.checkExistAccount(username)){
                 if(this.validMoneyTransfer(this.username,amount)){
                     if(this.transferMoneyAction(this.username,username,amount)){
+                        System.out.println("Chuyen tien thanh cong");
                         return true;
                     }
                     return false;
