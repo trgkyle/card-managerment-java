@@ -36,9 +36,9 @@ public class Customer {
         Scanner sc = new Scanner(System.in);
         String userTo;
         int amount;
-        System.out.println("Nhap ten tai khoan muon chuyen tien :");
+        System.out.print("Nhap ten tai khoan muon chuyen tien : ");
         userTo = sc.nextLine();
-        System.out.println("Nhap so tien muon chuyen");
+        System.out.print("Nhap so tien muon chuyen : ");
         amount = sc.nextInt();
         if(!this.account.transferMoney(userTo,amount)){
             System.out.println("Chuyen tien that bai");
@@ -90,6 +90,40 @@ public class Customer {
     }
     public void historyActivity() throws SQLException {
         this.account.getLogActiviry();
+    }
+    public void payCard() throws SQLException {
+        Scanner sc = new Scanner(System.in);
+        int amount;
+        do{
+            System.out.println("Chon menh gia the nap");
+            System.out.println("1. 20k");
+            System.out.println("2. 50k");
+            System.out.println("3. 100k");
+            System.out.println("4. 200k");
+            System.out.println("5. 500k");
+            System.out.println("6. Thoat");
+            amount = sc.nextInt();
+            switch (amount){
+                case 1:
+                    this.account.payment(20000);
+                    return;
+                case 2:
+                    this.account.payment(50000);
+                    return;
+                case 3:
+                    this.account.payment(100000);
+                    return;
+                case 4:
+                    this.account.payment(200000);
+                    return;
+                case 5:
+                    this.account.payment(500000);
+                    return;
+                case 6:
+                    return;
+            }
+        }while(true);
+
     }
     public static void main(){
         System.out.println("Hello main customer");

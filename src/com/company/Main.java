@@ -87,7 +87,7 @@ public class Main {
                     customer.showInfoAccount();
                     break;
                 case 2:
-                    //nap the
+                    customer.payCard();
                     break;
                 case 3:
                     customer.getRemainderThisAccount();

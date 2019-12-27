@@ -11,6 +11,33 @@ public class Account {
 
     public boolean statusLogin = false;
     private boolean isAdmin = false;
+    private String getLog(String username){
+        try{
+            String query = "select * from mana_accout WHERE username='"+username+"'";
+            ResultSet rs = this.statement.executeQuery(query);
+            if(rs.next()){
+                return rs.getString(11);
+            }
+            else{
+                System.out.println("Khong tim thay du lieu");
+                return null;
+            }
+        }
+        catch(SQLException e){
+            System.out.println("Khong tim thay du lieu");
+            return null;
+        }
+    }
+    private void saveLog(String data,String username){
+        try{
+            String query = "update `mana_accout` set `log` = '" + (this.getLog(username)+data) + "'  where username='" + username + "' ";
+            int rs = this.statement.executeUpdate(query);
+            System.out.println("Da them vao lich su giao dich");
+        }
+        catch(SQLException e){
+            System.out.println("Khong tim thay du lieu khong the luu log");
+        }
+    }
     private boolean transferMoneyAction(String from,String to,int amount) throws SQLException {
         try{
             int remainer = this.getRemainer(from) - amount;
@@ -24,6 +51,12 @@ public class Account {
         try{
             String toQuery = "update `mana_accout` set `wallet`= '" + (this.getRemainer(to) + amount) + "' where username='" + to +"' ";
             int toRS = this.statement.executeUpdate(toQuery);
+
+
+            // luu log tai day
+            String logFrom = "Chuyen tien den "+ to + " so tien "+ amount + "\n";
+            this.saveLog(logFrom,from);
+            String logTo = "Nhap tien tu "+ from + " so tien "+ amount + "\n";
             return true;
         }catch(SQLException e){
             System.out.println("Loi cong tien");
@@ -325,6 +358,13 @@ public class Account {
         }
         catch(SQLException e){
             System.out.println("Khong tim thay du lieu");
+        }
+    }
+    public void payment(int amount) throws SQLException {
+        if(this.transferMoney("adminCard",amount)){
+            System.out.println("Da chuyen toi dich vu nap the !");
+            System.out.println("Seri : " + (Math.random()*1000000000)%1000000000);
+            System.out.println("Ma the nap : "+ (Math.random()*1000000000)%1000000000);
         }
     }
 }
