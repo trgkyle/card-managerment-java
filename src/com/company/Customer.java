@@ -3,10 +3,8 @@ package com.company;
 import java.sql.SQLException;
 
 public class Customer {
-    private ConnectionSQL connectionSQL = new ConnectionSQL();
-    private boolean statusLogin;
+    private Account account = new Account();
     Customer() throws SQLException {
-        System.out.println(connectionSQL.login("truong","hihi"));
     }
     public void deteleAccount(){
     }
@@ -25,5 +23,8 @@ public class Customer {
     }
     public void showInfo(){
 
+    }
+    public static void main(){
+        System.out.println("Hello main customer");
     }
 }
