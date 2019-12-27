@@ -68,9 +68,10 @@ public class Main {
             System.out.println("3. Tra cuu so du");
             System.out.println("4. Chuyen Tien");
             System.out.println("5. Lich su giao dich");
-            System.out.println("6. Doi Mat Khau");
-            System.out.println("7. Xoa Tai khoan");
-            System.out.println("8. Dang xuat");
+            System.out.println("6. Chinh sua thong tin ca nhan");
+            System.out.println("7. Doi Mat Khau");
+            System.out.println("8. Xoa Tai khoan");
+            System.out.println("9. Dang xuat");
             System.out.println("====================================================================================");
             caseInput = sc.nextInt();
             switch (caseInput){
@@ -90,12 +91,15 @@ public class Main {
                     // lich su giao dich
                     break;
                 case 6:
-                    // doi mat khau
+                    customer.editInfo();
                     break;
                 case 7:
-                    customer.deteleAccount();
+                    // doi mat khau
                     break;
                 case 8:
+                    customer.deteleAccount();
+                    break;
+                case 9:
                     customer.logoutAccount();
                     return;
                 default:

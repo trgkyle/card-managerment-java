@@ -242,4 +242,15 @@ public class Account {
             return false;
         }
     }
+    public boolean editInfoThisAccount(String firstName, String lastName,int age,String phone) throws SQLException {
+        try {
+            String query = "update `mana_accout` set `firstName`= '" + firstName + "', " + "`lastName` = '" + lastName + "', " + "`age` = " + age + ", `phone` = '" + phone + "'  where username='" + this.username + "' ";
+            int rs = this.statement.executeUpdate(query);
+            System.out.println("Cap nhat thong tin thanh cong");
+            return true;
+        }catch (SQLException e){
+            System.out.println("Loi cap nhap thong tin");
+            return false;
+        }
+    }
 }

@@ -44,8 +44,22 @@ public class Customer {
             System.out.println("Chuyen tien that bai");
         }
     }
-    public void editInfo(){
-
+    public void editInfo() throws SQLException {
+        Scanner sc = new Scanner(System.in);
+        String firstName;
+        String lastName;
+        int age;
+        String phone;
+        System.out.println("Ten : ");
+        firstName = sc.nextLine();
+        System.out.println("Ho : ");
+        lastName = sc.nextLine();
+        System.out.println("Tuoi : ");
+        age = sc.nextInt();
+        sc.nextLine();
+        System.out.println("So dien thoai : ");
+        phone = sc.nextLine();
+        this.account.editInfoThisAccount(firstName,lastName,age,phone);
     }
     public void getRemainderThisAccount() throws SQLException {
         this.account.getRemainerThisAccount();
