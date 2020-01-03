@@ -8,14 +8,16 @@ public class Account {
     private String username;
     private String password;
     private ResultSet rs;
-
-    public boolean statusLogin = false;
+    private boolean statusLogin = false;
     private boolean isAdmin = false;
     private String getLog(String username){
         try{
             String query = "select * from mana_accout WHERE username='"+username+"'";
             ResultSet rs = this.statement.executeQuery(query);
             if(rs.next()){
+                System.out.println(rs.next());
+//                if(rs.getString(11).toString().equals("null"))
+//                    return null;
                 return rs.getString(11);
             }
             else{
@@ -28,11 +30,12 @@ public class Account {
             return null;
         }
     }
-    private void saveLog(String data,String username){
+
+    private void saveLog(String data, String username){
         try{
             String query = "update `mana_accout` set `log` = '" + (this.getLog(username)+data) + "'  where username='" + username + "' ";
             int rs = this.statement.executeUpdate(query);
-            System.out.println("Da them vao lich su giao dich");
+             System.out.println("Da them vao lich su giao dich");
         }
         catch(SQLException e){
             System.out.println("Khong tim thay du lieu khong the luu log");
@@ -55,8 +58,9 @@ public class Account {
 
             // luu log tai day
             String logFrom = "Chuyen tien den "+ to + " so tien "+ amount + "\n";
-            this.saveLog(logFrom,from);
             String logTo = "Nhap tien tu "+ from + " so tien "+ amount + "\n";
+            this.saveLog(logFrom,from);
+            this.saveLog(logTo,to);
             return true;
         }catch(SQLException e){
             System.out.println("Loi cong tien");
@@ -254,6 +258,9 @@ public class Account {
         System.out.println();
         System.out.println("So du Tai khoan hien co :"+ this.getRemainer(this.username));
         System.out.println();
+    }
+    public boolean isStatusLogin() {
+        return this.statusLogin;
     }
     public boolean transferMoney(String username,int amount) throws SQLException {
         if(this.statusLogin){

@@ -4,7 +4,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
-    public void adminVoid() throws SQLException {
+    public static void adminVoid() throws SQLException {
         Scanner sc = new Scanner(System.in);
         int caseInput;
         Admin admin = new Admin();
@@ -24,36 +24,47 @@ public class Main {
             System.out.println("11. Dang Xuat");
             System.out.println("=================================================================================");
             caseInput = sc.nextInt();
+            sc.nextLine();
             switch (caseInput){
                 case 1:
                     admin.showInfoAccount();
+                    sc.nextLine();
                     break;
                 case 2:
                     admin.getReMainerThisAccount();
+                    sc.nextLine();
                     break;
                 case 3:
                     admin.tranferMoney();
+                    sc.nextLine();
                     break;
                 case 4:
                     admin.historyActivity();
+                    sc.nextLine();
                     break;
                 case 5:
                     admin.createCustomerAccount();
+                    sc.nextLine();
                     break;
                 case 6:
                     admin.showAllCustomer();
+                    sc.nextLine();
                     break;
                 case 7:
                     admin.adminResetPassword();
+                    sc.nextLine();
                     break;
                 case 8:
                     admin.deteleCustomerAccount();
+                    sc.nextLine();
                     break;
                 case 9:
                     admin.editInfo();
+                    sc.nextLine();
                     break;
                 case 10:
                     admin.changePassword();
+                    sc.nextLine();
                     break;
                 case 11:
                     admin.logoutAccount();
@@ -64,7 +75,7 @@ public class Main {
             }
         }while(true);
     }
-    public void customerVoid() throws SQLException {
+    public static void customerVoid() throws SQLException {
         Scanner sc = new Scanner(System.in);
         int caseInput;
         Customer customer = new Customer();
@@ -82,30 +93,39 @@ public class Main {
             System.out.println("9. Dang xuat");
             System.out.println("====================================================================================");
             caseInput = sc.nextInt();
+            sc.nextLine();
             switch (caseInput){
                 case 1:
                     customer.showInfoAccount();
+                    sc.nextLine();
                     break;
                 case 2:
                     customer.payCard();
+                    sc.nextLine();
                     break;
                 case 3:
                     customer.getRemainderThisAccount();
+                    sc.nextLine();
                     break;
                 case 4:
                     customer.tranferMoney();
+                    sc.nextLine();
                     break;
                 case 5:
                     customer.historyActivity();
+                    sc.nextLine();
                     break;
                 case 6:
                     customer.editInfo();
+                    sc.nextLine();
                     break;
                 case 7:
                     customer.changePassword();
+                    sc.nextLine();
                     break;
                 case 8:
                     customer.deteleAccount();
+                    sc.nextLine();
                     break;
                 case 9:
                     customer.logoutAccount();
@@ -120,7 +140,6 @@ public class Main {
     public static void main(String[] args) throws SQLException {
         Scanner sc = new Scanner(System.in);
         int caseInput;
-        Main main = new Main();
         do{
             System.out.println("====================================DAI LY THE MANAGEMENT=================================");
             System.out.println("Lua chon tai khoan");
@@ -130,10 +149,10 @@ public class Main {
             caseInput = sc.nextInt();
             switch (caseInput){
                 case 1:
-                    main.adminVoid();
+                    adminVoid();
                     break;
                 case 2:
-                    main.customerVoid();
+                    customerVoid();
                     break;
                 default:
                     return;

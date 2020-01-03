@@ -27,7 +27,7 @@ public class Admin {
                 this.username = username;
             }
         }
-        while(!this.account.statusLogin || !this.account.isAdmin());
+        while(!this.account.isStatusLogin() || !this.account.isAdmin());
     }
     public void getReMainerThisAccount() throws SQLException {
         this.account.getRemainerThisAccount();
@@ -132,8 +132,5 @@ public class Admin {
     }
     public void historyActivity() throws SQLException {
         this.account.getLogActiviry();
-    }
-    public static void main(){
-        System.out.println("Hello main Admin");
     }
 }

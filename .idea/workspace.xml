@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d49f20e1-0018-4c91-b27f-108d391f0d80" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_mysql_jdbc_5_1_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaiTapLon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapLon.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Account.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/ConnectionSQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/ConnectionSQL.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Customer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ConnectionSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ConnectionSQL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
@@ -56,6 +61,7 @@
   <component name="ProjectId" id="1VADE1JmY9Kt2R7YPIaPkHDzvHH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -66,8 +72,8 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunAnythingCache">
@@ -149,6 +155,8 @@
       <workItem from="1577438572321" duration="1784000" />
       <workItem from="1577440393400" duration="1770000" />
       <workItem from="1577442211943" duration="1094000" />
+      <workItem from="1577868542948" duration="168000" />
+      <workItem from="1578017049106" duration="4314000" />
     </task>
     <servers />
   </component>
