@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d49f20e1-0018-4c91-b27f-108d391f0d80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_mysql_jdbc_5_1_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaiTapLon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BaiTapLon.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/ConnectionSQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/ConnectionSQL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BaiTapLon/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ConnectionSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ConnectionSQL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +145,7 @@
       <workItem from="1577440393400" duration="1770000" />
       <workItem from="1577442211943" duration="1094000" />
       <workItem from="1577868542948" duration="168000" />
-      <workItem from="1578017049106" duration="4314000" />
+      <workItem from="1578017049106" duration="4751000" />
     </task>
     <servers />
   </component>

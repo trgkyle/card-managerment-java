@@ -15,18 +15,18 @@ public class Account {
             String query = "select * from mana_accout WHERE username='"+username+"'";
             ResultSet rs = this.statement.executeQuery(query);
             if(rs.next()){
-                System.out.println(rs.next());
+                // System.out.println(rs.next());
 //                if(rs.getString(11).toString().equals("null"))
 //                    return null;
                 return rs.getString(11);
             }
             else{
-                System.out.println("Khong tim thay du lieu");
+                // System.out.println("Khong tim thay du lieu");
                 return null;
             }
         }
         catch(SQLException e){
-            System.out.println("Khong tim thay du lieu");
+            // System.out.println("Khong tim thay du lieu");
             return null;
         }
     }
@@ -57,8 +57,8 @@ public class Account {
 
 
             // luu log tai day
-            String logFrom = "Chuyen tien den "+ to + " so tien "+ amount + "\n";
-            String logTo = "Nhap tien tu "+ from + " so tien "+ amount + "\n";
+            String logFrom = "Chuyen tien den\t "+ to + " so tien \t"+ amount + "\n";
+            String logTo = "Nhap tien tu\t "+ from + " so tien \t"+ amount + "\n";
             this.saveLog(logFrom,from);
             this.saveLog(logTo,to);
             return true;
