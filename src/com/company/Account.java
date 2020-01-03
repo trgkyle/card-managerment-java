@@ -1,7 +1,7 @@
 package com.company;
 
 import java.sql.*;
-
+import java.util.*;
 public class Account {
     private ConnectionSQL connectionSQL = new ConnectionSQL();
     private Statement statement = this.connectionSQL.getStatement();
@@ -57,9 +57,13 @@ public class Account {
 
 
             // luu log tai day
-            String logFrom = "Chuyen tien den\t "+ to + " so tien \t"+ amount + "\n";
-            String logTo = "Nhap tien tu\t "+ from + " so tien \t"+ amount + "\n";
+            java.util.Date date = new java.util.Date();
+//            SimpleDateFormat ft = new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
+            String logFrom = "\n" + "Chuyen tien den\t "+ to + " \t-"+ amount + "\t" + date.toString() ;
+            String logTo = "\n" + "Nhan tien tu\t "+ from + " \t+"+ amount + "\t" + date.toString() ;
+            System.out.println("Them log vao tai khoan chuyen");
             this.saveLog(logFrom,from);
+            System.out.println("Them log vao tai khoan nhan");
             this.saveLog(logTo,to);
             return true;
         }catch(SQLException e){

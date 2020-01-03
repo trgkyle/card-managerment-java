@@ -63,6 +63,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunAnythingCache">
@@ -145,7 +146,7 @@
       <workItem from="1577440393400" duration="1770000" />
       <workItem from="1577442211943" duration="1094000" />
       <workItem from="1577868542948" duration="168000" />
-      <workItem from="1578017049106" duration="4751000" />
+      <workItem from="1578017049106" duration="5811000" />
     </task>
     <servers />
   </component>
